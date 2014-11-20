@@ -2,7 +2,7 @@
   .col-lg-12
     %h1.page-header
       Featured Film
-      %small= @movie.provider
+      %small= @movie.provider rescue nil
 
 - unless @movie.blank?
   .row
