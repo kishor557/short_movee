@@ -1,0 +1,16 @@
+<br>
+<div style="display: block; margin: 0px auto; position: relative;" class="html5gallery" data-skin="horizontal" data-width="840" data-height="420" data-slideshadow="false" data-resizemode="fill">
+  
+  <% Movie.all.each do |mv| %>
+    <% if mv.provider == "YouTube" %>
+        <a href="http://www.youtube.com/embed/<%= mv.video_id %>"><img src="<%= mv.thumbnail_large %>" alt="<%= mv.title %>"></a>
+    <% elsif mv.provider == "Vimeo" %>
+        <a href="http://player.vimeo.com/video/<%= mv.video_id %>?title=0&amp;byline=0&amp;portrait=0"><img src="<%= mv.thumbnail_large %>" alt="<%= mv.title %>"></a>
+    <% end %>
+  <% end %>
+  
+</div>
+
+<br>
+<br>
+<br>

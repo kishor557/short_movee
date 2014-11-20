@@ -1,0 +1,11 @@
+.container
+  .row
+    .col-md-8.center-block
+      %br
+      = form_for @movie, html: { class: "new_movie_form" } do |f|
+        .form-group
+          = f.label :url, class: "col-sm-2 control-label"
+          .col-sm-10= f.text_field :url, class: "required form-control"
+        .form-group
+          .col-sm-offset-2.col-sm-10= f.submit "Save", class: "btn btn-primary save_movie"
+          %br

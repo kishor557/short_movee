@@ -1,0 +1,54 @@
+
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+.error {
+  color: red;
+  font-size: 11px;
+}
+
+.portfolio-item {
+    margin-bottom: 25px;
+}
+
+#footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background-color: #222;
+  color: #777;
+  &:hover {
+    color: #fff;
+  }
+}
+
+.hide { display:none; }
+
+footer {
+  margin: 5px 0;
+  text-align: center;
+}
+
+fieldset {
+  padding: .35em .625em .75em !important;
+  margin: 0 2px !important;
+  border: 1px solid silver !important;
+  legend {
+    border: 0px !important;
+    margin-bottom: 0px !important;
+    font-size: 14px !important;
+    font-weight:bold;
+    width:auto !important;
+  }
+}
+
+.row {
+  .col-md-8 {
+    img, iframe {
+      width: 100% !important;;
+    }
+  }
+  .col-md-3 {
+  }
+}

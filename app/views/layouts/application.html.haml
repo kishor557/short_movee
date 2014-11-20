@@ -1,0 +1,39 @@
+!!!
+%html
+  %head
+    %title ShortMovieez
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1"}
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+  %body
+    %nav.navbar.navbar-default.navbar-inverse.navbar-fixed-top{:role => ""}
+      .container
+        .navbar-header
+          %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %b= link_to "Short Movieez", root_path, class: "navbar-brand"
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          %ul.nav.navbar-nav
+            %li= link_to "About", about_welcome_index_path
+            %li= link_to "Short Films", movies_path
+            %li= link_to "Submit your Film", "javascript:void(0);", "data-target" => "#myModal", "data-toggle" => "modal"
+            %li= link_to "Contact", contact_welcome_index_path
+    .container
+      - if notice.present?
+        %p.notice= notice
+      - if alert.present?
+        %p.alert= alert
+      = yield
+    #footer
+      .container
+        %footer
+          .row
+            .col-lg-12
+              Copyright © Short Movieez 2014
+    = image_tag("720.gif", :id => "loading-indicator", :style => "display:none;")
+
+= render 'movies/movie_model'

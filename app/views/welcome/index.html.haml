@@ -1,0 +1,37 @@
+.row
+  .col-lg-12
+    %h1.page-header
+      Featured Film
+      %small= @movie.provider
+
+- unless @movie.blank?
+  .row
+    .col-md-8
+      //%img.img-responsive{:alt => "", :src => "http://placehold.it/750x500"}/
+      = @movie.embed_code.html_safe
+    .col-md-4
+      %h3= @movie.title
+      %p= @movie.description
+      %h3 Movie Details
+      %ul
+        %li= @movie.duration
+        %li= @movie.date
+        %li= @movie.provider
+        %li= @movie.video_id
+
+=# link_to "New Short Film", new_movie_path, class: "new_movie12"
+%button.btn.btn-primary{"data-target" => "#myModal", "data-toggle" => "modal", :type => "button"}
+  New Short Film
+
+.row
+  - unless @list.empty?
+    .col-lg-12
+      %h3.page-header Related Movies
+    - @list.each do |movie|
+      .col-sm-3.col-xs-6
+        %a{href: movie.embed_url, class: "ytube"}
+          = image_tag(movie.thumbnail_medium, width: "260", height: "150")
+          //%img.img-responsive.portfolio-item{:alt => "", :src => "http://placehold.it/500x300"}/
+%br
+%br
+= render 'movies/movie_model'

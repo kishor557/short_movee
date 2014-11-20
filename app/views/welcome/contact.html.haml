@@ -1,0 +1,32 @@
+.row
+  .col-md-3
+    %fieldset
+      %legend About us
+      %h4 Short Movieez
+      %p
+        by 
+        %b Indianmind Services
+    
+    %br/
+    
+    %fieldset
+      %legend Address
+      8-3-633/9 Tawakkal Nagar, 
+      %br
+      Imam Guda, 
+      %br
+      Padala Ramareddy Colony, 
+      %br
+      Yousufguda Hyderabad, 
+      %br
+      Telangana 500073.
+  
+    %br/
+    
+    = link_to "Any Queries?", "javascript:void(0);", "data-toggle" => "modal", "data-target" => ".bs-example-modal-lg"
+     
+  .col-md-8
+    %iframe{src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7613.073322650021!2d78.43994909999998!3d17.434009699999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb90d033588df5%3A0xa8c7c1596846eb35!2s8-3-633%2F9%2C+Tawakkal+Nagar%2C+Imam+Guda%2C+Padala+Ramareddy+Colony%2C+Yousufguda%2C+Hyderabad%2C+Telangana+500073!5e0!3m2!1sen!2sin!4v1415416864081", width: "800", height: "450", frameborder: "0", style: "border:0"}
+    
+
+= render 'shared/contact_form'    

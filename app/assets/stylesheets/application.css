@@ -1,0 +1,62 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require bootstrap.min
+ *= require portfolio-item
+ *= require colorbox
+ *= require jquery-ui
+ */
+ 
+#sidebar { 
+  background: #0F1012;
+  color: #555;
+  float: left;
+  font-size: 1em;
+  line-height: 1.4em;
+  padding: 0;
+  position: relative;
+  z-index: 2;
+}
+
+#sidebar ul {
+ padding: 0px;
+}
+
+#sidebar ul li {
+ list-style-type: none;
+}
+
+#sidebar ul li a {
+ display: inline-block;
+  padding: 10px 8px;
+  width: 100%;
+  text-decoration: none;
+  color: #fff;
+  margin-left: 2px;
+}
+
+#sidebar ul li a:hover {
+  background-color: #efefef;
+  color: #000;
+}
+
+#sidebar ul li a.active {
+  background: #fff;
+  color: #000;
+}
+
+#loading-indicator {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}

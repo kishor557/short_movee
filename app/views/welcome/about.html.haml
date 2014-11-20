@@ -1,0 +1,18 @@
+.row
+  .col-md-8
+    Are you an individual filmmaker looking to promote your short films?
+    %br
+    You have come to the right place. Send us the youtube or Vimeo link for your movie, we will categorize and publish it in our website. 
+    %br
+    You can also submit details about your movie like trailer, pictures, music, facebook page etc. We will post it in our website and promote it.
+  .col-md-4
+    - movies = Movie.first(4)
+    %ul
+      - movies.each do |mv|
+        %li
+          = mv.created_at.strftime("%b %d, %Y")
+          = mv.title
+
+.row
+  = render 'gallery'
+

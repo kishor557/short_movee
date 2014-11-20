@@ -1,0 +1,9 @@
+- @movie = Movie.new
+= form_for @movie, html: { class: "new_movie_form" } do |f|
+  .modal-body
+    .form-group
+      = f.text_field :url, class: "required form-control", placeholder: "Short Film Url"
+  .modal-footer
+    %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Close
+    = f.submit "Save", class: "btn btn-primary save_movie"
+

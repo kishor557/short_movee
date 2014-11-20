@@ -1,0 +1,24 @@
+LMFT todos app Readme
+
+- Ruby version: 2.0.0
+- Rails version: 4.1.0
+- Database - MySQL
+- Bootstrap
+- Colorbox
+- NProgress JS
+
+
+Todo List:
+1. Contact us page with Map pointing
+2. Contact us form to submit queries
+3. User authentication
+4. Admin panel
+more to come soon ........
+
+
+
+Important Links:
+https://github.com/thibaudgg/video_info
+http://www.jacklmoore.com/colorbox/
+http://getbootstrap.com
+

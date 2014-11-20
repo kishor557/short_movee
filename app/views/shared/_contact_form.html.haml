@@ -1,0 +1,20 @@
+.modal.fade.bs-example-modal-lg{"aria-hidden" => "true", "aria-labelledby" => "myLargeModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"data-dismiss" => "modal", :type => "button"}
+          %span{"aria-hidden" => "true"} ×
+          %span.sr-only Close
+        %h4#myLargeModalLabel.modal-title Any Queries?
+      - @query = Query.new
+      = form_for @query, html: { class: "new_query_form" } do |f|
+        .modal-body
+          .form-group
+            = f.text_field :subject, class: "required form-control", placeholder: "Subject"
+          .form-group
+            = f.text_field :email, class: "required form-control", placeholder: "Email"
+          .form-group
+            = f.text_area :content, class: "required form-control", placeholder: "Your Query Content"
+        .modal-footer
+          %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Close
+          = f.submit "Save", class: "btn btn-primary save_query"

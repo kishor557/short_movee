@@ -1,0 +1,16 @@
+.row
+  = image_tag("banner.jpg")
+  %br
+  .col-md-3#sidebar
+    %ul
+      - @movies.each do |mv|
+        %li.mvz{id: "mv_#{mv.id}"}= link_to mv.title, movie_path(mv), :remote => true   
+  .col-md-8
+    .mv_details
+      - if @movies.blank?
+        = "Films are coming soon...stay tuned"
+      - else
+        = @movies.first.embed_code.html_safe
+
+
+       

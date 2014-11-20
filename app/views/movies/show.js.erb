@@ -1,0 +1,11 @@
+$('.mv_details').html('<%= escape_javascript(render :partial => "show", :movie => @movie ) %>');
+//$('#mv_<%= @movie.id %>').find('a').addClass('active');
+$('.mvz').each(function() {
+  if ($(this).attr('id') == "mv_<%= @movie.id %>") {
+    console.log("y");
+    $(this).find('a').addClass('active');
+  }else {
+    console.log("n");
+    $(this).find('a').removeClass('active');
+  }
+});
